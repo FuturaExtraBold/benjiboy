@@ -1,0 +1,10 @@
+.hero {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle, lightblue, darkblue);
+  color: white;
+  text-align: center;
+}

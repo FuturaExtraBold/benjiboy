@@ -1,0 +1,41 @@
+.bokeh-background {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: red;
+}
+
+.bokeh-circle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  animation: float 20s linear infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100vw);
+  }
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Additional styles to randomly position and size the circles */
+.bokeh-circle {
+  width: 1000px;
+  height: 1000px;
+  top: calc(100% * var(--i));
+  left: calc(100% * var(--j));
+  opacity: calc(0.4 + 0.9 * var(--k));
+  animation-duration: calc(10s + 10s * var(--l));
+}
