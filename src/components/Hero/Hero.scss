@@ -3,4 +3,23 @@
 .hero {
   @include container();
   color: white;
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  overflow: visible;
+  height: 100vh;
+}
+
+.hero-image-container {
+  border: 20px solid white;
+  border-bottom: 100px solid white;
+  border-radius: 6px;
+  transform: rotate(-2deg);
+  box-shadow: 0 10px 80px rgba(0, 0, 0, 0.5);
+  overflow: visible;
+}
+
+.hero-image {
+  height: 600px;
+  box-shadow: inset 10px 0 20px rgba(0, 0, 0, 0.5);
 }

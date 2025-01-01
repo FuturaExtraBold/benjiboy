@@ -3,6 +3,7 @@
 *::after {
   box-sizing: border-box;
 }
+
 html,
 body {
   overflow-x: hidden;
@@ -10,15 +11,18 @@ body {
   height: 100%;
   background-color: #ffffff;
 }
+
 header,
 section,
 footer {
   position: relative;
   display: block;
 }
+
 img {
   @include responsive-image;
 }
+
 .container {
   @include container;
 }
