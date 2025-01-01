@@ -1,8 +1,6 @@
+@import "../../assets/stylesheets/all.scss";
+
 .hero {
-  align-items: center;
+  @include container();
   color: white;
-  height: 100px;
-  justify-content: center;
-  position: relative;
-  text-align: center;
 }

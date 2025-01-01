@@ -1,9 +1,9 @@
-import React from 'react';
-import './Hero.scss';
+import React from "react";
+import "./Hero.scss";
 
 const Hero = () => {
   return (
-    <div className="section hero">
+    <div className="hero">
       <h1>Hero</h1>
     </div>
   );
