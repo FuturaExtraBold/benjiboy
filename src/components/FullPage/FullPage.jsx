@@ -1,6 +1,8 @@
 import React from "react";
 import ReactFullpage from "@fullpage/react-fullpage";
 import Hero from "../Hero/Hero";
+import Hooky from "../Hooky/Hooky";
+import Kajabi from "../Kajabi/Kajabi";
 import "./FullPage.scss";
 
 const Fullpage = () => (
@@ -20,10 +22,10 @@ const Fullpage = () => (
             <Hero />
           </div>
           <div className="section">
-            <p>Kajabi</p>
+            <Kajabi />
           </div>
           <div className="section">
-            <p>Hooky</p>
+            <Hooky />
           </div>
         </ReactFullpage.Wrapper>
       );

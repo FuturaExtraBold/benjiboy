@@ -1,7 +1,7 @@
-import React from 'react';
-import './BokehBackground.scss';
+import React from "react";
+import "./Bokeh.scss";
 
-const BokehBackground = () => {
+const Bokeh = () => {
   const circles = Array.from({ length: 100 });
 
   return (
@@ -10,7 +10,7 @@ const BokehBackground = () => {
         const size = Math.random() * 200 + 10;
         const top = Math.random() * 100;
         const left = Math.random() * 100;
-        const opacity = Math.random() * 0.1 + 0.1;
+        const opacity = Math.random() * 0.1 + 0.2;
         const duration = Math.random() * 200 + 10;
 
         return (
@@ -23,7 +23,7 @@ const BokehBackground = () => {
               top: `${top}%`,
               left: `${left}%`,
               opacity: opacity,
-              animationDuration: `${duration}s`
+              animationDuration: `${duration}s`,
             }}
           ></div>
         );
@@ -32,4 +32,4 @@ const BokehBackground = () => {
   );
 };
 
-export default BokehBackground;
+export default Bokeh;

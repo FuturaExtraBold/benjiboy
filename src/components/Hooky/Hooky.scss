@@ -1,0 +1,5 @@
+@import "../../assets/stylesheets/all.scss";
+
+.hooky {
+  @include container();
+}

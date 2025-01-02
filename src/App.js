@@ -1,12 +1,12 @@
 import React from "react";
-import BokehBackground from "./components/Bokeh/BokehBackground/BokehBackground";
+import Bokeh from "./components/Bokeh/Bokeh";
 import Fullpage from "./components/FullPage/FullPage";
 import "./assets/stylesheets/all.scss";
 
 function App() {
   return (
     <div className="App">
-      <BokehBackground />
+      <Bokeh />
       <Fullpage />
     </div>
   );
