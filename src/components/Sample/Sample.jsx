@@ -1,13 +1,22 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Sample.scss";
+import { SampleModalContext } from "../../context/SampleModalContext";
 
-function Sample() {
+function Sample({ title, image, className }) {
+  const { toggleModal } = useContext(SampleModalContext);
+
   return (
     <div
-      className="sample"
-      onClick={() => console.log("Sample component clicked")}
+      className={`sample ${className}`}
+      onClick={() => {
+        console.log("Sample component clicked");
+        toggleModal();
+      }}
     >
-      <div>Sample</div>
+      <img src={image} alt={title} className="sample__image" />
+      <div className="sample__content">
+        <h3>{title}</h3>
+      </div>
     </div>
   );
 }

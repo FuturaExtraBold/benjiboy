@@ -12,12 +12,17 @@
 
 .hero__image-container {
   border: 20px solid white;
-  border-bottom: 100px solid white;
+  border-bottom: 80px solid white;
   border-radius: 6px;
   box-shadow: 8px 8px 20px 20px rgba(0, 0, 0, 0.5);
   transform: scale(1.7) rotate(-3deg);
   opacity: 0.3;
   animation: transformAnimation 0.35s ease-in-out forwards;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .hero__image {

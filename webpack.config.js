@@ -1,5 +1,5 @@
 module.exports = {
   resolve: {
-    extensions: [".jsx", ".js", ".tsx", ".ts"]
-  }
+    extensions: [".jsx", ".js", ".json", ".tsx", ".ts"],
+  },
 };
