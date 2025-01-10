@@ -18,7 +18,7 @@ const Fullpage = () => (
   <ReactFullpage
     //fullpage options
     afterLoad={afterLoad}
-    licenseKey={"36BNK-WTI58-HN0Y6-BIC27-WHNUM"}
+    licenseKey={process.env.REACT_APP_FULL_PAGE_KEY}
     navigation={true}
     navigationPosition={"right"}
     navigationTooltips={[]}

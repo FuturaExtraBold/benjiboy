@@ -1,5 +1,4 @@
 @use "sass:math";
-$angle: math.random(-5, 5);
 @import "../../assets/stylesheets/all.scss";
 
 .sample {
@@ -15,9 +14,4 @@ $angle: math.random(-5, 5);
   cursor: pointer;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   flex-direction: column;
-}
-
-.sample--askew {
-  // Generate a random angle between -5 and 5 degrees
-  transform: rotate(#{$angle}deg);
 }
