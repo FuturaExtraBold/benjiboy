@@ -1,4 +1,5 @@
 $that-base: #e2d3bc;
+$kajabi-base: #2e91fc;
 
 .bokeh-background {
   position: absolute;
@@ -6,6 +7,14 @@ $that-base: #e2d3bc;
   height: 100vh;
   overflow: hidden;
   background: radial-gradient(circle, $that-base, darken($that-base, 80%));
+}
+
+.bokeh-background--kajabi {
+  background-color: radial-gradient(
+    circle,
+    $that-base,
+    darken($kajabi-base, 80%)
+  );
 }
 
 .bokeh-circle {
