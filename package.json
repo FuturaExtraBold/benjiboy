@@ -2,7 +2,7 @@
   "name": "benzo",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://FuturaExtraBold.github.io/benjiboy",
+  "homepage": "https://benhays.dev",
   "dependencies": {
     "@fullpage/react-fullpage": "^0.1.46",
     "cra-template": "1.2.0",

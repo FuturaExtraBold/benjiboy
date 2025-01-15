@@ -5,9 +5,8 @@ import { SampleModalContext } from "../../context/SampleModalContext";
 function Sample({ title, image, className }) {
   const { toggleModal } = useContext(SampleModalContext);
 
-  const randomRotation = Math.random() * 10 - 5;
-
   const getStyles = () => {
+    const randomRotation = Math.random() * 10 - 5;
     if (className === "sample--askew") {
       return { transform: `rotate(${randomRotation}deg)` };
     } else return {};
