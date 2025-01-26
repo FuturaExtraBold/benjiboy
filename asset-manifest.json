@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.5315ea41.css",
-    "main.js": "/static/js/main.2c74bdec.js",
+    "main.css": "/static/css/main.fbc8b434.css",
+    "main.js": "/static/js/main.21acd6c0.js",
     "static/media/dipshitV2.jpg": "/static/media/dipshitV2.51a907f1852fd6c12925.jpg",
     "index.html": "/index.html",
-    "main.5315ea41.css.map": "/static/css/main.5315ea41.css.map",
-    "main.2c74bdec.js.map": "/static/js/main.2c74bdec.js.map"
+    "main.fbc8b434.css.map": "/static/css/main.fbc8b434.css.map",
+    "main.21acd6c0.js.map": "/static/js/main.21acd6c0.js.map"
   },
   "entrypoints": [
-    "static/css/main.5315ea41.css",
-    "static/js/main.2c74bdec.js"
+    "static/css/main.fbc8b434.css",
+    "static/js/main.21acd6c0.js"
   ]
 }
