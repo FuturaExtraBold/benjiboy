@@ -1,8 +1,32 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { gsap } from "gsap";
 import "./Hero.scss";
 import heroImage from "../../assets/images/dipshitV2.jpg";
 
 const Hero = () => {
+  useEffect(() => {
+    // GSAP animation for the image
+    gsap.fromTo(
+      ".hero__image-frame",
+      { scale: 3, opacity: 0 }, // Initial state
+      { scale: 1, opacity: 1, duration: 0.5, ease: "power3.out" } // Final state
+    );
+
+    // Continuous random animation for the frame
+    const animateFrame = () => {
+      gsap.to(".hero__image-frame", {
+        x: gsap.utils.random(-15, 15), // Random X movement
+        y: gsap.utils.random(-15, 15), // Random Y movement
+        rotation: gsap.utils.random(-3, 3), // Random rotation
+        duration: 2, // Duration for each cycle
+        ease: "power1.inOut", // Smooth easing
+        onComplete: animateFrame, // Recursively call the animation
+      });
+    };
+
+    animateFrame(); // Start the animation
+  }, []);
+
   return (
     <div className="hero">
       <div className="hero__image-container">
