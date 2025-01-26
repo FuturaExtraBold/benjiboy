@@ -19,7 +19,7 @@ const Hero = () => {
           <br />
           IS BEN HAYS
         </h1>
-        <h3 className="other-font">He writes code, so you don't have to.</h3>
+        <h2 className="other-font">He writes code, so you don't have to.</h2>
       </div>
     </div>
   );

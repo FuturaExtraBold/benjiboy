@@ -4,7 +4,7 @@ import "./HookySamples.scss";
 import kajabiSampleData from "../../data/kajabiSamples";
 
 function HookySamples() {
-  console.log("kajabiSampleData:", kajabiSampleData);
+  // console.log("kajabiSampleData:", kajabiSampleData);
   const [samples, setSamples] = useState([]);
 
   useEffect(() => {

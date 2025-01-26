@@ -4,7 +4,7 @@ import "./KajabiSamples.scss";
 import kajabiSampleData from "../../data/kajabiSamples";
 
 function KajabiSamples() {
-  console.log("kajabiSampleData:", kajabiSampleData);
+  // console.log("kajabiSampleData:", kajabiSampleData);
   const [samples, setSamples] = useState([]);
 
   useEffect(() => {
