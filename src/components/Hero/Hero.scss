@@ -4,15 +4,17 @@
   @include container();
   color: white;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 100px;
+  justify-content: center;
+  gap: 10px;
   overflow: visible;
   height: 100vh;
 }
 
 .hero__image-frame {
-  padding: 20px;
-  padding-bottom: 80px;
+  padding: 10px;
+  padding-bottom: 40px;
   background-color: white;
   border-radius: 6px;
   border-top-left-radius: 10px;
@@ -20,38 +22,54 @@
   animation: transformAnimation 0.3s ease-in;
   position: relative;
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
-  transform: scale(1) rotate(-5deg);
+  transform: scale(1);
+  margin-bottom: 30px;
+}
+
+.hero__image-title {
+  color: black;
+  position: absolute;
+  z-index: 1000000;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 8px;
+  margin: 0;
 }
 
 .hero__image {
-  height: 500px;
+  height: 256px;
 }
 
 .hero__content {
-  flex: 1;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-content: center;
   justify-content: center;
   line-height: 1;
+  gap: 20px;
 }
 
+.hero__subtitle,
 .hero__title {
-  color: black;
-  position: absolute;
-  z-index: 1000000;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 0px;
+  margin-bottom: 0px;
 }
 
-@keyframes transformAnimation {
-  from {
-    transform: scale(2) rotate(-45deg);
-    opacity: 0;
+@media (min-width: 768px) {
+  .hero__content {
+    gap: 40px;
   }
-  to {
-    opacity: 1;
+
+  .hero__image-frame {
+    padding: 20px;
+    padding-bottom: 80px;
+  }
+
+  .hero__image-title {
+    bottom: 20px;
+  }
+
+  .hero__image {
+    height: 500px;
   }
 }

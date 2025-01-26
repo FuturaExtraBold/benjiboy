@@ -10,16 +10,18 @@ const Hero = () => {
           <div className="hero__image-container-inset">
             <img alt="Dipshit" className="hero__image" src={heroImage} />
           </div>
-          <p className="hero__title">Actual Photo</p>
+          <p className="hero__image-title">Actual Photo</p>
         </div>
       </div>
       <div className="hero__content">
-        <h1 className="display--1">
+        <h1 className="display--1 hero__title">
           THIS...
           <br />
           IS BEN HAYS
         </h1>
-        <h2 className="other-font">He writes code, so you don't have to.</h2>
+        <h2 className="secondary-font display--2 hero__subtitle">
+          He writes code, so you don't have to.
+        </h2>
       </div>
     </div>
   );
