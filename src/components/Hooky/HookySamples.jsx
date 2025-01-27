@@ -4,7 +4,6 @@ import "./HookySamples.scss";
 import kajabiSampleData from "../../data/kajabiSamples";
 
 function HookySamples() {
-  // console.log("kajabiSampleData:", kajabiSampleData);
   const [samples, setSamples] = useState([]);
 
   useEffect(() => {
@@ -12,17 +11,19 @@ function HookySamples() {
   }, []);
 
   return (
-    <div className="hooky-samples">
-      {samples.map((sample, index) => (
-        <Sample
-          className="sample--askew"
-          key={index}
-          title={sample.title}
-          image={sample.image}
-          description={sample.description}
-        />
-      ))}
-    </div>
+    <>
+      <div className="hooky-samples">
+        {samples.map((sample, index) => (
+          <Sample
+            className="sample--askew"
+            key={index}
+            title={sample.title}
+            image={sample.image}
+            description={sample.description}
+          />
+        ))}
+      </div>
+    </>
   );
 }
 

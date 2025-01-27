@@ -28,6 +28,15 @@
   z-index: 1000;
 }
 
+.sample-modal__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 48px;
+  color: black;
+  cursor: pointer;
+}
+
 @keyframes showModal {
   to {
     opacity: 1;

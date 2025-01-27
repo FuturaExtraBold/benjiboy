@@ -10,7 +10,9 @@ function SampleModal() {
   return (
     <div className="sample-modal">
       <div className="sample-modal__content">
-        <button onClick={toggleModal}>Close</button>
+        <div onClick={toggleModal} className="display-1 sample-modal__close">
+          X Close
+        </div>
         <p>Sample Modal Content</p>
       </div>
     </div>
