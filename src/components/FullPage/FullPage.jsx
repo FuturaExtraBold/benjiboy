@@ -12,7 +12,7 @@ const onLeave = (origin, destination, direction) => {
 
   // Define an array of colors for each section
   const colors = ["#040302", "#2e91fc", "#2ecc71"];
-  const circleColors = ["#ff0000", "#00ff00", "#0000ff"];
+  const circleColors = ["#ff0000", "#ffffff", "#0000ff"];
 
   // Get the color based on the destination index, falling back to a default if needed
   const newColor = colors[destination.index % colors.length] || "#ffffff";

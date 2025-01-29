@@ -3,9 +3,9 @@
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  background-color: #040302; // Default color
+  background-color: #040302; /* Default color */
 
-  // Add vignette effect
+  /* Add vignette effect */
   &::after {
     content: "";
     position: absolute;
@@ -19,7 +19,7 @@
       rgba(0, 0, 0, 0) 60%,
       rgba(0, 0, 0, 0.7) 100%
     );
-    z-index: 1; // Ensure it overlays the bokeh circles
+    z-index: 1; /* Ensure it overlays the bokeh circles */
   }
 }
 
@@ -27,32 +27,26 @@
   position: absolute;
   border-radius: 50%;
   background-color: #ff0000;
-  animation: float 20s linear infinite;
+  animation: fadeFloat 20s linear infinite;
+
+  /* Use the custom CSS variable for fade opacity */
+  --fade-opacity: 1;
 }
 
-@keyframes float {
+/* Keyframes for movement with fade-in, random opacity, and fade-out */
+@keyframes fadeFloat {
   0% {
     transform: translateX(0);
+    opacity: 0; /* Start invisible */
+  }
+  10% {
+    opacity: var(--fade-opacity); /* Transition to the random opacity */
+  }
+  90% {
+    opacity: var(--fade-opacity); /* Maintain the random opacity */
   }
   100% {
     transform: translateX(-50vw);
+    opacity: 0; /* Fade out */
   }
-}
-
-.content {
-  position: relative;
-  z-index: 1;
-  color: white;
-  text-align: center;
-  padding: 20px;
-}
-
-/* Additional styles to randomly position and size the circles */
-.bokeh-circle {
-  width: 100px;
-  height: 100px;
-  top: calc(100% * var(--i));
-  left: calc(100% * var(--j));
-  opacity: calc(0.1 + 0.9 * var(--k));
-  animation-duration: calc(10s + 10s * var(--l));
 }
