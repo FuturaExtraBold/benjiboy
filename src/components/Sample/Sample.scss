@@ -2,7 +2,6 @@
 @import "../../assets/stylesheets/all.scss";
 
 .sample {
-  @include grid-col();
   width: 100%;
   height: 200px;
   background-color: #ffffff;

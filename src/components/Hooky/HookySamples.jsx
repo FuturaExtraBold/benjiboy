@@ -15,7 +15,6 @@ function HookySamples() {
       <div className="hooky-samples">
         {samples.map((sample, index) => (
           <Sample
-            className="sample--askew"
             key={index}
             title={sample.title}
             image={sample.image}

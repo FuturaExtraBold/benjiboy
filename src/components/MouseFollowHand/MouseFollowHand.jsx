@@ -45,7 +45,7 @@ const MouseFollowHand = ({ enable }) => {
         position: "absolute",
         top: -15,
         left: -15,
-        width: "1000px",
+        width: "2580px",
         height: "auto",
         transform: "translate(-100%, -100%)", // Offset to make top-right of div match cursor
         pointerEvents: "none",
