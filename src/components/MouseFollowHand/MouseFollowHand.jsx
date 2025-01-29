@@ -9,6 +9,14 @@ const MouseFollowHand = ({ enable }) => {
     if (!enable) return;
     console.log("MouseFollowHand enabled");
     const hand = handRef.current;
+
+    // Instantly move the 'hand' element to the position
+    gsap.to(hand, {
+      x: "100%",
+      y: "50%",
+      duration: 0,
+    });
+
     const handleMouseMove = (event) => {
       const mouseX = event.clientX;
       const mouseY = event.clientY;

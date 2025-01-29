@@ -7,28 +7,6 @@ import Kajabi from "../Kajabi/Kajabi";
 import MouseFollowHand from "../MouseFollowHand/MouseFollowHand";
 import "./FullPage.scss";
 
-const onLeave = (origin, destination, direction) => {
-  console.log("onLeave", { origin, destination, direction });
-
-  // Define an array of colors for each section
-  const colors = ["#040302", "#2e91fc", "#2ecc71"];
-  const circleColors = ["#ff0000", "#ffffff", "#0000ff"];
-
-  // Get the color based on the destination index, falling back to a default if needed
-  const newColor = colors[destination.index % colors.length] || "#ffffff";
-  const newCircleColor =
-    circleColors[destination.index % circleColors.length] || "#ffffff";
-
-  // Target the bokeh background and apply the new background color
-  const bokehBackground = document.querySelector(".bokeh-background");
-  gsap.to(bokehBackground, { backgroundColor: newColor, duration: 1 });
-
-  const circles = document.getElementsByClassName("bokeh-circle");
-  Array.from(circles).forEach((circle) => {
-    gsap.to(circle, { backgroundColor: newCircleColor, duration: 1 });
-  });
-};
-
 const Fullpage = () => {
   const [enableCustomCursor, setEnableCustomCursor] = useState(false);
   const [hookyAnimated, setHookyAnimated] = useState(false);
@@ -53,6 +31,37 @@ const Fullpage = () => {
       // Hooky Section
       console.log("Hooky Section");
       triggerHookyAnimation();
+      setEnableCustomCursor(true);
+    } else {
+      setEnableCustomCursor(false);
+    }
+  };
+
+  const onLeave = (origin, destination, direction) => {
+    console.log("onLeave", { origin, destination, direction });
+
+    // Define an array of colors for each section
+    const colors = ["#040302", "#2e91fc", "#2ecc71"];
+    const circleColors = ["#ff0000", "#ffffff", "#0000ff"];
+
+    // Get the color based on the destination index, falling back to a default if needed
+    const newColor = colors[destination.index % colors.length] || "#ffffff";
+    const newCircleColor =
+      circleColors[destination.index % circleColors.length] || "#ffffff";
+
+    // Target the bokeh background and apply the new background color
+    const bokehBackground = document.querySelector(".bokeh-background");
+    gsap.to(bokehBackground, { backgroundColor: newColor, duration: 1 });
+
+    const circles = document.getElementsByClassName("bokeh-circle");
+    Array.from(circles).forEach((circle) => {
+      gsap.to(circle, { backgroundColor: newCircleColor, duration: 1 });
+    });
+
+    if (destination.index === 1) {
+      setEnableCustomCursor(false);
+    }
+    if (destination.index === 2) {
       setEnableCustomCursor(true);
     } else {
       setEnableCustomCursor(false);
