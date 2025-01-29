@@ -1,0 +1,20 @@
+.hero-text {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  line-height: 1;
+  gap: 20px;
+}
+
+.hero-text__subtitle,
+.hero-text__title {
+  margin-bottom: 0px;
+}
+
+@media (min-width: 768px) {
+  .hero__text {
+    gap: 40px;
+  }
+}

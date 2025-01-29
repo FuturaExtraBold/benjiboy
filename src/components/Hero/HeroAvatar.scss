@@ -1,0 +1,39 @@
+.hero-avatar__image-frame {
+  padding: 10px;
+  padding-bottom: 40px;
+  background-color: white;
+  border-radius: 6px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 12px;
+  position: relative;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
+}
+
+.hero-avatar__image-title {
+  color: black;
+  position: absolute;
+  z-index: 1000000;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 8px;
+  margin: 0;
+}
+
+.hero-avatar__image {
+  height: 256px;
+}
+
+@media (min-width: 768px) {
+  .hero-avatar__image-frame {
+    padding: 20px;
+    padding-bottom: 80px;
+  }
+
+  .hero-avatar__image-title {
+    bottom: 20px;
+  }
+
+  .hero-avatar__image {
+    height: 500px;
+  }
+}
