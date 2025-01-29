@@ -54,14 +54,12 @@ const HeroAvatar = () => {
 
   return (
     <div className="hero-avatar">
-      <div className="hero-avatar__image-frame">
+      <div
+        className="hero-avatar__image-frame"
+        style={{ visibility: imageLoaded ? "visible" : "hidden" }}
+      >
         <div className="hero-avatar__container-inset">
-          <img
-            alt="Dipshit"
-            className="hero-avatar__image"
-            src={heroImage}
-            style={{ visibility: imageLoaded ? "visible" : "hidden" }} // Hide until loaded
-          />
+          <img alt="Dipshit" className="hero-avatar__image" src={heroImage} />
         </div>
         <p className="hero-avatar__image-title">Actual Photo</p>
       </div>
