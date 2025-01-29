@@ -6,25 +6,34 @@ import heroImage from "../../assets/images/dipshitV2.jpg";
 const HeroAvatar = () => {
   const [initialAnimationComplete, setInitialAnimationComplete] =
     useState(false);
+  const [imageLoaded, setImageLoaded] = useState(false);
 
+  // Preload image
   useEffect(() => {
-    console.log("Hero component mounted");
-    // GSAP animation for the image
-    gsap.fromTo(
-      ".hero-avatar__image-frame",
-      { scale: 3, opacity: 0 }, // Initial state
-      {
-        scale: 1,
-        opacity: 1,
-        duration: 0.5,
-        ease: "power3.out",
-        onComplete: setInitialAnimationComplete(true),
-      } // Final state
-    );
+    const img = new Image();
+    img.src = heroImage;
+    img.onload = () => setImageLoaded(true);
   }, []);
 
+  // Initial animation when the image is loaded
   useEffect(() => {
-    console.log("Initial animation complete:", initialAnimationComplete);
+    if (imageLoaded) {
+      console.log("Hero component mounted");
+      gsap.fromTo(
+        ".hero-avatar__image-frame",
+        { scale: 3, opacity: 0 }, // Initial state
+        {
+          scale: 1,
+          opacity: 1,
+          duration: 0.5,
+          ease: "power3.out",
+          onComplete: () => setInitialAnimationComplete(true),
+        }
+      );
+    }
+  }, [imageLoaded]);
+
+  useEffect(() => {
     if (initialAnimationComplete) {
       // Continuous random animation for the frame
       const animateFrame = () => {
@@ -47,7 +56,12 @@ const HeroAvatar = () => {
     <div className="hero-avatar">
       <div className="hero-avatar__image-frame">
         <div className="hero-avatar__container-inset">
-          <img alt="Dipshit" className="hero-avatar__image" src={heroImage} />
+          <img
+            alt="Dipshit"
+            className="hero-avatar__image"
+            src={heroImage}
+            style={{ visibility: imageLoaded ? "visible" : "hidden" }} // Hide until loaded
+          />
         </div>
         <p className="hero-avatar__image-title">Actual Photo</p>
       </div>
